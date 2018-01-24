@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import generic.Base_Page;
 
-public class Loginpage extends Base_Page{
+public class Signuppage extends Base_Page{
 
 	@FindBy(id="h_sin_up")
 	public WebElement signup;
@@ -30,8 +30,14 @@ public class Loginpage extends Base_Page{
 	@FindBy(id="cp")
 	public WebElement createpassword;
 	
+	@FindBy(xpath="//button[.='Thanks']")
+	public WebElement thanks;
 	
-	public Loginpage(WebDriver driver)
+	@FindBy(xpath="//div[@id='ssu']/h3")
+	public WebElement confirmationmsg;
+	
+	
+	public Signuppage(WebDriver driver)
 	{
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -53,22 +59,36 @@ public class Loginpage extends Base_Page{
 		submit.click();
 	}
 
+	public void firstname()
 	{
-		firstname.sendKeys("bharanigr");
+		firstname.sendKeys("");
 	}
     
 	public void lastname()
+
 	{
-		lastname.sendKeys("ramesh");
+		lastname.sendKeys("");
 	}
 	
 	public void emailid()
 	{
-		emailid.sendKeys("bharani1@gmail.com");
+		emailid.sendKeys("");
 	}
 	
 	public void createpassword()
 	{
-		createpassword.sendKeys("bharani12345");
+		createpassword.sendKeys("");
 	}
+	
+	public void thanks()
+	{
+		thanks.click();
+	}
+	
+	public void confirmationmsg()
+	{
+		confirmationmsg.getText().toString().contains("Congratulations");
+	}
+	
+	
 }
