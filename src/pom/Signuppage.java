@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import generic.Base_Page;
+import generic.Genrics;
 
 public class Signuppage extends Base_Page{
 
@@ -30,6 +31,9 @@ public class Signuppage extends Base_Page{
 	@FindBy(id="cp")
 	public WebElement createpassword;
 	
+	@FindBy(xpath="//button[text()='Submit']")
+	public WebElement submit123;
+	
 	@FindBy(xpath="//button[.='Thanks']")
 	public WebElement thanks;
 	
@@ -51,7 +55,7 @@ public class Signuppage extends Base_Page{
 	
 	public void phonenumb()
 	{
-		phonenumb.click();
+		phonenumb.sendKeys(Genrics.getConfigProperties("Phonenumb"));;
 	}
 	
 	public void submit()
@@ -61,23 +65,28 @@ public class Signuppage extends Base_Page{
 
 	public void firstname()
 	{
-		firstname.sendKeys("");
+		firstname.sendKeys(Genrics.getConfigProperties("Firstname"));
 	}
     
 	public void lastname()
 
 	{
-		lastname.sendKeys("");
+		lastname.sendKeys(Genrics.getConfigProperties("Lastname"));
 	}
 	
 	public void emailid()
 	{
-		emailid.sendKeys("");
+		emailid.sendKeys(Genrics.getConfigProperties("Emailid"));
 	}
 	
 	public void createpassword()
 	{
-		createpassword.sendKeys("");
+		createpassword.sendKeys(Genrics.getConfigProperties("Createpassword"));
+	}
+	
+	public void submita()
+	{
+		submit123.click();
 	}
 	
 	public void thanks()

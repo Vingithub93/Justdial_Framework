@@ -11,14 +11,14 @@ public class Base_Test {
 	public void openapplication()
 	{
 		System.setProperty(Auto_constant.GECKO_KEY, Auto_constant.GECKO_VALUE);
-		WebDriver driver=new FirefoxDriver();
+		driver=new FirefoxDriver();
 		driver.get("https://www.justdial.com/");
 		
 	}
 	@AfterMethod
 	public void closeapplicayion()
 	{
-		driver.quit();
+		driver.close();
 	}
 
 }

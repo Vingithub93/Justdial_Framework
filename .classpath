@@ -16,6 +16,7 @@
 	<classpathentry kind="lib" path="poi/poi-ooxml-schemas-3.17.jar"/>
 	<classpathentry kind="lib" path="poi/poi-scratchpad-3.17.jar"/>
 	<classpathentry kind="lib" path="poi/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="lib" path="software/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="software/selenium-server-standalone-3.8.1(1).jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
