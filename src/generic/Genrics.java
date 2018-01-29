@@ -3,7 +3,6 @@ package generic;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import org.testng.Assert;
 
 public class Genrics {
 	
